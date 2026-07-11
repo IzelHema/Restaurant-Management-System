@@ -1,0 +1,41 @@
+:root{
+
+    /* Primary Theme */
+
+    --primary:#7B1E2B;
+    --primary-hover:#651925;
+
+    /* Background */
+
+    --background:#E8E8E8;
+
+    /* Cards */
+
+    --card:#FFFFFF;
+
+    /* Text */
+
+    --text:#2E2E2E;
+    --text-light:#777777;
+
+    /* Border */
+
+    --border:#D9D9D9;
+
+    /* Success */
+
+    --success:#2E8B57;
+
+    /* Danger */
+
+    --danger:#D32F2F;
+
+    /* Radius */
+
+    --radius:12px;
+
+    /* Shadow */
+
+    --shadow:0 4px 12px rgba(0,0,0,0.08);
+
+}

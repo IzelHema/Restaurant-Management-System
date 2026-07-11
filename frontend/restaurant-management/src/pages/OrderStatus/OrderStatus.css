@@ -1,0 +1,137 @@
+.status-page{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    background:#eef1f5;
+    padding:24px;
+}
+
+.status-container{
+    width:min(960px, 100%);
+    background:#f8fafc;
+    padding:24px;
+    border-radius:16px;
+    box-shadow:0 8px 24px rgba(15,23,42,.06);
+}
+
+.status-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:16px;
+    margin:24px 0;
+}
+
+.status-header h2{
+    margin:0;
+    color:var(--primary);
+    font-size:28px;
+}
+
+.status-list{
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+}
+
+.status-order-card{
+    background:white;
+    padding:18px 20px;
+    border-radius:12px;
+    border:1px solid #e2e8f0;
+    box-shadow:0 4px 12px rgba(15,23,42,.05);
+    cursor:pointer;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    transition:.2s;
+}
+
+.status-order-card h3{
+    margin:0 0 6px;
+    font-size:19px;
+}
+
+.status-order-card p{
+    margin:0;
+    color:var(--text-light);
+}
+
+.status-order-card:hover{
+    transform:translateY(-2px);
+}
+
+.status-item-count{
+    font-weight:700;
+    color:var(--primary);
+}
+
+.status-back-btn{
+    min-width:120px;
+    padding:11px 16px;
+    border:none;
+    border-radius:8px;
+    background:#c76b72;
+    color:white;
+    font-weight:700;
+    cursor:pointer;
+}
+
+.status-badge{
+    padding:7px 13px;
+    border-radius:999px;
+    font-size:13px;
+    font-weight:700;
+}
+
+.status-badge.pending{
+    background:#e5e7eb;
+    color:#334155;
+}
+
+.status-badge.preparing{
+    background:#fef3c7;
+    color:#b45309;
+}
+
+.status-badge.ready{
+    background:#dcfce7;
+    color:#15803d;
+}
+
+.done-btn{
+    margin-top:24px;
+    min-width:150px;
+    padding:12px 18px;
+    border:none;
+    border-radius:8px;
+    background:#cfcfcf;
+    color:white;
+    font-weight:700;
+}
+
+.done-btn.active{
+    background:#147a57;
+    cursor:pointer;
+}
+
+.serve-btn{
+    margin-left:12px;
+    padding:8px 14px;
+    border:none;
+    border-radius:8px;
+    background:#147a57;
+    color:white;
+    font-weight:700;
+    cursor:pointer;
+}
+
+.served-text{
+    margin-left:12px;
+    color:#147a57;
+    font-weight:700;
+}
+
+.clickable{
+    cursor:pointer;
+}

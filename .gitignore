@@ -1,0 +1,21 @@
+# Visual Studio
+.vs/
+**/.vs/
+*.user
+*.suo
+
+# ASP.NET
+**/bin/
+**/obj/
+
+# React
+**/node_modules/
+**/dist/
+**/.vite/
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db

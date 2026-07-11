@@ -1,0 +1,196 @@
+.kitchen-device-page{
+    min-height:100vh;
+    background:#eef2f7;
+    padding:24px;
+    overflow-x:hidden;
+}
+
+/* Header */
+
+.kitchen-device-page .kitchen-device-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    gap:20px;
+    margin-bottom:28px;
+}
+
+.kitchen-device-page .kitchen-device-header h1{
+    margin:16px 0 0;
+    color:#0f172a;
+    font-size:30px;
+}
+
+.kitchen-device-page .kitchen-live-indicator{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    padding:8px 14px;
+    border-radius:999px;
+    background:#dcfce7;
+    color:#15803d;
+    font-size:13px;
+    font-weight:700;
+}
+
+.kitchen-device-page .kitchen-live-dot{
+    width:8px;
+    height:8px;
+    border-radius:50%;
+    background:#22c55e;
+}
+
+/* Orders grid */
+
+.kitchen-device-page .kitchen-device-grid{
+    width:100%;
+    display:grid;
+    grid-template-columns:repeat(2, minmax(0, 1fr));
+    gap:20px;
+}
+
+/*
+Important:
+display:block overrides the flex style coming from KitchenSelect.css
+*/
+.kitchen-device-page .kitchen-device-card{
+    display:block;
+    min-width:0;
+    background:white;
+    padding:22px;
+    border-radius:16px;
+    border:1px solid #e2e8f0;
+    box-shadow:0 8px 22px rgba(15,23,42,.07);
+}
+
+.kitchen-device-page .kitchen-device-card h2{
+    margin:0 0 6px;
+    color:#243a73;
+    font-size:22px;
+}
+
+.kitchen-device-page .kitchen-device-card > p{
+    margin:0 0 18px;
+    color:#64748b;
+}
+
+/* Each food item stacks vertically */
+
+.kitchen-device-page .kitchen-device-item{
+    width:100%;
+    margin-top:12px;
+    padding:14px;
+    background:#f8fafc;
+    border:1px solid #e2e8f0;
+    border-radius:12px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:18px;
+}
+
+.kitchen-device-page .kitchen-device-item > div:first-child{
+    flex:1;
+    min-width:0;
+}
+
+.kitchen-device-page .kitchen-device-item h3{
+    margin:0 0 6px;
+    font-size:17px;
+    color:#0f172a;
+}
+
+.kitchen-device-page .kitchen-device-item p{
+    margin:3px 0;
+    color:#64748b;
+    font-size:14px;
+}
+
+/* Status buttons */
+
+.kitchen-device-page .kitchen-status-buttons{
+    display:grid;
+    grid-template-columns:repeat(3, minmax(85px, 1fr));
+    gap:8px;
+    min-width:290px;
+}
+
+.kitchen-device-page .kitchen-status-buttons button{
+    border:none;
+    padding:10px 12px;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:700;
+    white-space:nowrap;
+    transition:.2s;
+}
+
+.kitchen-device-page .kitchen-status-buttons button:hover{
+    transform:translateY(-1px);
+}
+
+.kitchen-device-page .kitchen-status-buttons button:nth-child(1){
+    background:#e2e8f0;
+    color:#334155;
+}
+
+.kitchen-device-page .kitchen-status-buttons button:nth-child(2){
+    background:#fef3c7;
+    color:#b45309;
+}
+
+.kitchen-device-page .kitchen-status-buttons button:nth-child(3){
+    background:#dcfce7;
+    color:#15803d;
+}
+
+/* Back button */
+
+.kitchen-device-page .kitchen-back-btn{
+    border:none;
+    background:#243a73;
+    color:white;
+    padding:10px 16px;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:700;
+}
+
+.kitchen-device-page .kitchen-back-btn:hover{
+    background:#1d2f5e;
+}
+
+/* Responsive */
+
+@media(max-width:1000px){
+    .kitchen-device-page .kitchen-device-grid{
+        grid-template-columns:1fr;
+    }
+}
+
+@media(max-width:700px){
+    .kitchen-device-page{
+        padding:14px;
+    }
+
+    .kitchen-device-page .kitchen-device-header{
+        flex-direction:column;
+    }
+
+    .kitchen-device-page .kitchen-device-item{
+        flex-direction:column;
+        align-items:stretch;
+    }
+
+    .kitchen-device-page .kitchen-status-buttons{
+        min-width:0;
+        width:100%;
+    }
+}
+
+@media(max-width:480px){
+    .kitchen-device-page .kitchen-status-buttons{
+        grid-template-columns:1fr;
+    }
+}

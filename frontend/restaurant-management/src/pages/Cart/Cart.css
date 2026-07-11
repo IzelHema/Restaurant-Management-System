@@ -1,0 +1,127 @@
+.cart-page{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    background:#eef1f5;
+    padding:24px;
+}
+
+.cart-container{
+    width:min(960px, 100%);
+    padding:24px;
+    background:#f8fafc;
+    border-radius:16px;
+    box-shadow:0 8px 24px rgba(15,23,42,.06);
+}
+
+.cart-topbar{
+    min-height:58px;
+    background:var(--primary);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 20px;
+    color:white;
+    border-radius:12px;
+}
+
+.cart-actions{
+    display:flex;
+    justify-content:space-between;
+    gap:16px;
+    margin-top:22px;
+}
+
+.table-label{
+    background:white;
+    flex:1;
+    padding:14px;
+    border-radius:10px;
+    text-align:center;
+    border:1px solid #e2e8f0;
+    font-weight:700;
+}
+
+.cart-back-btn{
+    min-width:130px;
+    border:none;
+    border-radius:8px;
+    background:#c76b72;
+    color:white;
+    font-weight:700;
+    cursor:pointer;
+}
+
+.cart-content{
+    min-height:360px;
+    margin-top:22px;
+}
+
+.empty-text{
+    font-size:18px;
+    font-weight:600;
+    color:#64748b;
+}
+
+.cart-item{
+    background:white;
+    color:#0f172a;
+    padding:16px;
+    border-radius:12px;
+    margin-bottom:12px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    border:1px solid #e2e8f0;
+    box-shadow:0 4px 12px rgba(15,23,42,.05);
+}
+
+.cart-qty-actions{
+    display:flex;
+    align-items:center;
+    gap:8px;
+}
+
+.cart-qty-actions button{
+    border:none;
+    padding:8px 11px;
+    border-radius:8px;
+    cursor:pointer;
+    background:#f1f5f9;
+}
+
+.cart-total{
+    display:flex;
+    justify-content:space-between;
+    font-size:20px;
+    font-weight:700;
+    margin:20px 0;
+    padding-top:18px;
+    border-top:1px solid #e2e8f0;
+}
+
+.cart-bottom{
+    display:flex;
+    justify-content:space-between;
+    gap:12px;
+    margin-top:20px;
+}
+
+.add-items-btn,
+.send-kitchen-btn{
+    border:none;
+    padding:13px 24px;
+    border-radius:8px;
+    font-weight:700;
+    cursor:pointer;
+}
+
+.add-items-btn{
+    background:#ef4444;
+    color:white;
+}
+
+.send-kitchen-btn{
+    background:#147a57;
+    color:white;
+}

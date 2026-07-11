@@ -1,0 +1,99 @@
+.kitchen-select-page{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:40px;
+    background:#f4f6fb;
+}
+
+.kitchen-select-card{
+    width:min(900px, 100%);
+    background:white;
+    border-radius:20px;
+    padding:42px;
+    box-shadow:0 18px 50px rgba(31,45,80,.12);
+}
+
+.kitchen-select-header{
+    text-align:center;
+    margin-bottom:34px;
+}
+
+.kitchen-select-logo{
+    display:block;
+    font-size:52px;
+    margin-bottom:10px;
+}
+
+.kitchen-select-header h1{
+    margin:0 0 8px;
+    color:#1f2f55;
+}
+
+.kitchen-select-header p{
+    margin:0;
+    color:#718096;
+}
+
+.kitchen-device-grid{
+    display:grid;
+    grid-template-columns:repeat(2, 1fr);
+    gap:22px;
+}
+
+.kitchen-device-card{
+    border:1px solid #e2e8f0;
+    background:#ffffff;
+    border-radius:16px;
+    padding:28px;
+    cursor:pointer;
+    text-align:left;
+    display:flex;
+    align-items:center;
+    gap:20px;
+    transition:.2s ease;
+}
+
+.kitchen-device-card:hover{
+    transform:translateY(-4px);
+    border-color:#334e8a;
+    box-shadow:0 12px 26px rgba(31,45,80,.12);
+}
+
+.device-icon{
+    font-size:44px;
+}
+
+.kitchen-device-card h2{
+    margin:0 0 8px;
+    color:#243a73;
+}
+
+.kitchen-device-card p{
+    margin:0;
+    color:#718096;
+    line-height:1.5;
+}
+
+.kitchen-logout-btn{
+    display:block;
+    margin:28px auto 0;
+    padding:11px 24px;
+    border:none;
+    border-radius:8px;
+    background:#e53e3e;
+    color:white;
+    font-weight:700;
+    cursor:pointer;
+}
+
+@media (max-width:700px){
+    .kitchen-device-grid{
+        grid-template-columns:1fr;
+    }
+
+    .kitchen-select-card{
+        padding:26px;
+    }
+}
