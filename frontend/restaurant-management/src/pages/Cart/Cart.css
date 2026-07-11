@@ -125,3 +125,13 @@
     background:#147a57;
     color:white;
 }
+
+.success-message{
+    margin:16px 0;
+    padding:12px 16px;
+    border-radius:10px;
+    background:#dcfce7;
+    color:#15803d;
+    font-weight:700;
+    border:1px solid #bbf7d0;
+}

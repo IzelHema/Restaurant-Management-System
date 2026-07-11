@@ -9,6 +9,9 @@ function CashierBill() {
     const [order, setOrder] = useState(null);
     const [paymentMode, setPaymentMode] = useState("Cash");
 
+    const [message, setMessage] = useState("");
+    const [messageType, setMessageType] = useState("success");
+
     useEffect(() => {
         loadBill();
     }, []);
@@ -20,7 +23,8 @@ function CashierBill() {
 
     const handleConfirmPayment = async () => {
         await cashierService.processPayment(order.orderId, paymentMode);
-        alert("Payment Successful");
+        setMessageType("success");
+        setMessage("Payment completed successfully");
         navigate("/cashier");
     };
 
@@ -71,6 +75,11 @@ function CashierBill() {
                         <button onClick={handleConfirmPayment}>
                             Confirm Payment
                         </button>
+                        {message && (
+                            <div className={`app-message ${messageType}`}>
+                                {message}
+                            </div>
+                        )}
                     </div>
                 </div>
             </div>

@@ -11,10 +11,11 @@ import "./Cart.css";
 function Cart() {
     const navigate = useNavigate();
     const { tableId } = useParams();
+    const [message, setMessage] = useState("");
 
     const handleSendToKitchen = async () => {
         if (cartItems.length === 0) {
-            alert("Please add items before sending to kitchen");
+            setMessage("Please add items before sending to kitchen");
             return;
         }
 
@@ -32,15 +33,17 @@ function Cart() {
         try {
             const response = await orderService.createOrder(orderRequest);
 
-            alert(response.message);
+            setMessage(response.message || "Order sent to kitchen successfully.");
 
             localStorage.removeItem(`cart_table_${tableId}`);
             
-
+            setTimeout(() => {
+            localStorage.removeItem(`cart_table_${tableId}`);
             navigate("/waiter");
+        }, 1200);
         } catch (error) {
             console.error(error);
-            alert("Failed to send order to kitchen");
+            setMessage("Failed to send order to kitchen");
         }
     };
     
@@ -96,6 +99,7 @@ function Cart() {
     
 
     return (
+        
         <div className="cart-page">
             <div className="cart-container">
 
@@ -179,9 +183,15 @@ function Cart() {
                         + Add Items
                     </button>
 
+                    {message && (
+                        <div className="success-message">
+                            {message}
+                        </div>
+                    )}
+
                     <button
                         className="send-kitchen-btn"
-                        onClick={handleSendToKitchen}>
+                        onClick={handleSendToKitchen} >
                         Send to Kitchen
                     </button>
                 </div>

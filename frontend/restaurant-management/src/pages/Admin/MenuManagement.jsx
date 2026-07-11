@@ -12,6 +12,9 @@ function MenuManagement() {
     const [search, setSearch] = useState("");
     const [filter, setFilter] = useState("All");
 
+    const [showDeleteModal, setShowDeleteModal] = useState(false);
+    const [selectedItem, setSelectedItem] = useState(null);
+
     const [form, setForm] = useState({
         itemName: "",
         categoryId: 1,
@@ -95,18 +98,22 @@ function MenuManagement() {
     
 
 
-    const handleDelete = async (id) => {
-
-    const confirmDelete = window.confirm(
-            "Are you sure you want to delete this menu item?"
-        );
-
-        if (!confirmDelete)
+    const deleteItem = async () => {
+        if (!selectedItem?.id) {
+            console.error("No menu item selected");
             return;
+        }
 
-        await menuService.deleteMenuItem(id);
+        try {
+            await menuService.deleteMenuItem(selectedItem.id);
 
-        loadMenu();
+            setShowDeleteModal(false);
+            setSelectedItem(null);
+
+            await loadMenu();
+        } catch (error) {
+            console.error("DELETE MENU ITEM ERROR:", error);
+        }
     };
 
     const filteredMenu = menu.filter(item => {
@@ -207,7 +214,10 @@ function MenuManagement() {
 
                                         <button
                                             className="action-btn delete-action"
-                                            onClick={() => handleDelete(item.id)}
+                                            onClick={() => {
+                                                setSelectedItem(item);
+                                                setShowDeleteModal(true);
+                                            }}
                                         >
                                             Delete
                                         </button>
@@ -299,6 +309,47 @@ function MenuManagement() {
                         </form>
                     </div>
                 </div>
+            )}
+
+            {showDeleteModal && (
+
+                <div className="admin-modal-overlay">
+
+                    <div className="admin-modal">
+
+                        <h2>Delete Menu Item</h2>
+
+                        <p>
+                            Are you sure you want to delete
+                            <strong> {selectedItem?.name}</strong>?
+                        </p>
+
+                        <div className="modal-actions">
+
+                            <button
+                                className="modal-cancel-btn"
+                                onClick={() => {
+                                    setShowDeleteModal(false);
+                                    setSelectedItem(null);
+                                }}
+                            >
+                                Cancel
+                            </button>
+
+                            <button
+                                type="button"
+                                className="delete-btn"
+                                onClick={deleteItem}
+                            >
+                                Delete
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
             )}
 
         </AdminLayout>

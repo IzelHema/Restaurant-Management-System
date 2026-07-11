@@ -232,7 +232,8 @@ function UserManagement() {
                                 <td>
                                     <div className="table-actions">
 
-                                        <button className="action-btn edit-action">
+                                        <button className="action-btn edit-action"
+                                        onClick={() => openEditModal(user)}>
                                             Edit
                                         </button>
 

@@ -210,3 +210,23 @@
     min-width:170px;
     cursor:pointer;
 }
+
+
+.app-message{
+    padding:12px 16px;
+    border-radius:10px;
+    margin-bottom:16px;
+    font-weight:700;
+}
+
+.app-message.success{
+    background:#dcfce7;
+    color:#15803d;
+    border:1px solid #bbf7d0;
+}
+
+.app-message.error{
+    background:#fee2e2;
+    color:#b91c1c;
+    border:1px solid #fecaca;
+}
