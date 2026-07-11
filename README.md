@@ -95,7 +95,8 @@ SQL Server Database
 
 ### Prerequisites
 
-- Visual Studio 2022
+- Visual Studio 2026
+- VS Code
 - SQL Server
 - .NET SDK
 - Node.js
