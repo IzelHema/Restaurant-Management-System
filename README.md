@@ -18,7 +18,6 @@ The application provides dedicated modules for different user roles, ensuring sm
 - Dashboard
 - User Management
 - Menu Management
-- Category Management
 - Table Management
 - Order Monitoring
 
@@ -41,7 +40,6 @@ The application provides dedicated modules for different user roles, ensuring sm
 ### Cashier
 - View Pending Orders
 - Generate Bills
-- Complete Payments
 - Payment History
 
 ---
@@ -63,7 +61,7 @@ The application provides dedicated modules for different user roles, ensuring sm
 - Entity Framework Core (Code First)
 
 ### Tools
-- Visual Studio 2022
+- Visual Studio 2026
 - Visual Studio Code
 - SQL Server Management Studio (SSMS)
 - Swagger
